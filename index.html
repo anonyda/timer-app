@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <script src="./scripts/script.js" defer></script>
+    <title>Timer Application</title>
+</head>
+<body>
+    
+    <div class="timer-container">
+        <h2>Timer</h2>
+        <div class="time">
+            <div class="hours">
+                <input type="number" max="99" min="0" placeholder="HH" id="hours">
+                <div>Hours</div>
+            </div>
+            <div class="minutes">
+                <input type="number" max="60" min="0" placeholder="MM" id="minutes">
+                <div>Minutes</div>
+            </div>
+            <div class="seconds">
+                <input type="number" max="60" min="0" placeholder="SS" id="seconds">
+                <div>Seconds</div>
+            </div>
+        </div>
+        <div class="control-buttons">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+    
+</body>
+</html>
