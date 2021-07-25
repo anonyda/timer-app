@@ -20,9 +20,15 @@ const startTimer = () => {
         pauseBtn.style = 'display: unset';
         timer = setInterval(()=> {
             if(hours.value == 0 && minutes.value == 0 && seconds.value== 0){
-                hours.value = 0;
-                minutes.value = 0;
-                seconds.value = 0;
+                alert("Timer Completed");
+                hours.value = "";
+                minutes.value = "";
+                seconds.value = "";
+                clearInterval(timer);
+                pauseBtn.style = 'display: none';
+                startBtn.style = 'display: unset';
+
+
             }
             else if(seconds.value != 0){
                 if(hours.value == ""){
