@@ -25,9 +25,18 @@ const startTimer = () => {
                 seconds.value = 0;
             }
             else if(seconds.value != 0){
+                if(hours.value == ""){
+                    hours.value = 0;
+                }
+                if(minutes.value==""){
+                    minutes.value = 0;
+                }
                 seconds.value -=1;
             }
             else if(seconds.value == 0 && minutes.value != 0){ 
+                if(hours.value == ""){
+                    hours.value = 0;
+                }
                 minutes.value -= 1;
                 seconds.value = 59;
             }
