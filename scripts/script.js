@@ -10,7 +10,9 @@ const seconds = document.getElementById('seconds');
 let timer = null;
 
 const startTimer = () => {
-    
+    hours.disabled = true;
+    minutes.disabled = true;
+    seconds.disabled = true;
     
     if(hours.value == 0 && minutes.value == 0 && seconds.value== 0){
         alert('Enter a time to start the timer.')
@@ -25,6 +27,9 @@ const startTimer = () => {
                 minutes.value = "";
                 seconds.value = "";
                 clearInterval(timer);
+                hours.disabled = false;
+                minutes.disabled = false;
+                seconds.disabled = false;
                 pauseBtn.style = 'display: none';
                 startBtn.style = 'display: unset';
 
@@ -65,6 +70,9 @@ const resetTimer = () => {
     pauseBtn.style = 'display: none';
     startBtn.style = 'display: unset';
     clearInterval(timer);
+    hours.disabled = false;
+    minutes.disabled = false;
+    seconds.disabled = false;
     hours.value = "";
     minutes.value = "";
     seconds.value = "";
